@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './screens/Home';
+import SplashScreen from './screens/SplashScreen';
 
 const App = () => {
-  return <Home />;
+  return <SplashScreen />;
 };
 
 export default App;
