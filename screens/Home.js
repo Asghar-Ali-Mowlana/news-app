@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
   Linking,
 } from 'react-native';
-// import {WebView} from 'react-native-webview';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Card from '../components/Card';
 
@@ -24,7 +23,7 @@ const Home = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const getMoviesFromApiAsync = async () => {
+  const getNewsFromApiAsync = async () => {
     try {
       const response = await fetch(
         'https://newsapi.org/v2/top-headlines?country=us&apiKey=cbc5e2222f1d454c8399e9027288cc29',
@@ -62,7 +61,6 @@ const Home = () => {
                   Linking.openURL(item.url).catch(err =>
                     console.error('Error', err),
                   );
-                  // return <WebView source={{uri: item.url}} />;
                 }}>
                 <Card item={item} />
               </TouchableOpacity>
