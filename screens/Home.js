@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getMoviesFromApiAsync();
+    getNewsFromApiAsync();
   }, []);
   return (
     <SafeAreaView style={backgroundStyle}>
